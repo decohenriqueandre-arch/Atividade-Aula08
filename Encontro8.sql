@@ -4,20 +4,12 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
--- -----------------------------------------------------
--- Schema Encontro8
--- -----------------------------------------------------
+
 
 -- -----------------------------------------------------
--- Schema Encontro8
+-- Table FUNCIONARIOS
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS Encontro8 ;
-USE Encontro8 ;
-
--- -----------------------------------------------------
--- Table Encontro8.FUNCIONARIOS
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Encontro8.FUNCIONARIOS (
+CREATE TABLE IF NOT EXISTS FUNCIONARIOS (
   ID_FUNCIONARIO INT NOT NULL AUTO_INCREMENT,
   NOME_FUNCIONARIO VARCHAR(50) NOT NULL,
   SALARIO DECIMAL(10,2) NOT NULL,
@@ -28,9 +20,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Encontro8.FORNECEDORES
+-- Table FORNECEDORES
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Encontro8.FORNECEDORES (
+CREATE TABLE IF NOT EXISTS FORNECEDORES (
   ID_FORNECEDOR INT NOT NULL AUTO_INCREMENT,
   NOME_FORNECEDOR VARCHAR(50) NOT NULL,
   PRIMARY KEY (ID_FORNECEDOR))
@@ -38,9 +30,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Encontro8.PRODUTOS
+-- Table PRODUTOS
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Encontro8.PRODUTOS (
+CREATE TABLE IF NOT EXISTS PRODUTOS (
   ID_PRODUTO INT NOT NULL AUTO_INCREMENT,
   NOME_PRODUTO VARCHAR(50) NOT NULL,
   PRECO_VENDA DECIMAL(10,2) NOT NULL,
@@ -51,9 +43,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Encontro8.CLIENTES
+-- Table CLIENTES
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Encontro8.CLIENTES (
+CREATE TABLE IF NOT EXISTS CLIENTES (
   ID_CLIENTE INT NOT NULL AUTO_INCREMENT,
   NOME_CLIENTE VARCHAR(50) NOT NULL,
   PRIMARY KEY (ID_CLIENTE))
@@ -61,9 +53,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table Encontro8.VENDAS
+-- Table VENDAS
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Encontro8.VENDAS (
+CREATE TABLE IF NOT EXISTS VENDAS (
   ID_VENDA INT NOT NULL AUTO_INCREMENT,
   DATA_VENDA DATE NOT NULL,
   ID_PRODUTO INT NOT NULL,
